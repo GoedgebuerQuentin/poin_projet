@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <sidebar />
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
@@ -8,6 +9,20 @@
     <router-view/>
   </div>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+import Sidebar from '@/components/sidebar/Sidebar.vue'
+
+@Component({
+  components: {
+    Sidebar
+  }
+})
+export default class App extends Vue {
+
+}
+</script>
 
 <style>
 #app {
